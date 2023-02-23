@@ -1,0 +1,16 @@
+Yes, Airflow comes with a command-line interface (CLI) that allows you to 
+perform various operations on your DAGs, such as starting, stopping, or 
+restarting a DAG, running individual tasks within a DAG, and checking 
+the status of running DAGs.
+
+Here are some commonly used Airflow CLI commands:
+
+airflow list_dags: Lists all the DAGs available in Airflow.
+airflow list_tasks <DAG_NAME>: Lists all the tasks in a given DAG.
+airflow test <DAG_NAME> <TASK_NAME> <EXECUTION_DATE>: Runs a single task instance for a given DAG and execution date.
+airflow backfill <DAG_NAME> -s <START_DATE> -e <END_DATE>: Runs a backfill operation for a given DAG, starting from the specified start date and ending at the specified end date.
+airflow trigger_dag <DAG_NAME>: Triggers a DAG manually.
+airflow unpause <DAG_NAME>: Unpauses a DAG.
+airflow pause <DAG_NAME>: Pauses a DAG.
+airflow resetdb: Resets the Airflow metadata database.
+You can run these commands from the terminal or command prompt, or you can schedule them to run automatically using a cron job or another scheduling tool.
