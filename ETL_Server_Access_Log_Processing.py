@@ -11,9 +11,9 @@ from airflow.utils.dates import days_ago
 #defining DAG arguments
 # You can override them on a per-task basis during operator initialization
 default_args = {
-    'owner': 'Ramesh Sannareddy',
+    'owner': 'Redouane',
     'start_date': days_ago(0),
-    'email': ['ramesh@somemail.com'],
+    'email': ['redouane@somemail.com'],
     'email_on_failure': False,
     'email_on_retry': False,
     'retries': 1,
@@ -27,7 +27,7 @@ default_args = {
 dag = DAG(
     'ETL_Server_Access_Log_Processing',
     default_args=default_args,
-    description='My first DAG',
+    description='dag',
     schedule_interval=timedelta(days=1),
 )
 ###############################################
@@ -76,8 +76,3 @@ download >> extract >> transform >> load
 # cp  ETL_Server_Access_Log_Processing.py $AIRFLOW_HOME/dags
 #Verify if the DAG is submitted.
 #airflow dags list
-
-
-
-
-
